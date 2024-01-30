@@ -37,7 +37,7 @@ function studentsAverageAboveThree(data) {
   const res = data.filter((student) => student.averageGrade > 3);
 
   console.log(`This is the array of students with an average grade higher than 3 `, res);
-  return res;
+  
 }
 
 
@@ -47,7 +47,7 @@ function femalesAverageGradeOdFive(data) {
   const res = data.filter((student) => student.averageGrade === 5 && student.gender === "Female").map((student) => `${student.firstName}`);
 
   console.log(`The female student names with an average grade of 5`, res);
-  return res;
+  
 }
 
 //- All male student full names who live in Skopje and are over 18 years old
@@ -69,7 +69,7 @@ function averageGradesFemales(data) {
 //- All male students with a name starting with B and average grade over 2
 
 function maleStudentsNameB(data) {
-  const res = data.filter((student) => student.firstName.charAt(0) === "B" && student.averageGrade > 2 && student.gender === "Male");
+  const res = data.filter((student) => student.firstName.startsWith("B") && student.averageGrade > 2 && student.gender === "Male");
 
   console.log(`All male students with a name starting with B and average grade over 2`, res);
 }
